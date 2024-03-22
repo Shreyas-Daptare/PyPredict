@@ -1,0 +1,630 @@
+{% extends "base.html" %} {% block content%}
+<!-- Mobile Banner -->
+
+<div class="mobile-banner">
+  <div class="mobile-banner__main">
+    <img src="../static/assets/images/logo.svg" alt="Binance Logo" />
+    <div class="mobile-banner__main--title">
+      <h2>PyPredict</h2>
+      <p>Accurate, fast and Real-time</p>
+    </div>
+  </div>
+  <div class="mobile-banner__sub">
+    <div class="mobile-banner__sub--download">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        class="css-1atd3u"
+      >
+        <path
+          d="M19 20H5v2h14v-2zM13 14.5l4.6-4.7 1.5 1.4-7.1 7.1-7.1-7.1 1.4-1.4 4.7 4.7V2h2v12.5z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
+    <div class="mobile-banner__sub--cancel">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M13.4 12l6.6 6.6-1.4 1.4-6.6-6.6L5.4 20 4 18.6l6.6-6.6L4 5.4 5.4 4l6.6 6.6L18.6 4 20 5.4 13.4 12z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Banner -->
+<div class="banner__content--btn__cancel"></div>
+
+<!-- Header -->
+
+<header class="header">
+  <div class="max-wrapper">
+    <div class="max-wrapper__content">
+      <section class="header__main">
+        <div class="header__main--content">
+          <h1 class="std-title theme--text">
+            PyPredict - Predicts Prices of all Popular Cryptocurrencies
+          </h1>
+          <div class="header__main--content__trade">
+            <p class="theme--text">
+              Uses ML Algorithms for Accurate Prediction in real-time
+            </p>
+          </div>
+          <div class="header__main--content__max">
+            <div class="header__main--content__btn">
+              <div>
+                <span class="material-icons"> person </span>
+                Resources and References
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__main--image">
+          <img
+            src="../static/assets/images/foreground-image-dark.png"
+            alt="foreground header image"
+          />
+        </div>
+      </section>
+      <section class="header__stats theme--text">
+        <div class="header__stats--stat">
+          <div>
+            <h1>60-75 %</h1>
+            <p>Automated Trades</p>
+          </div>
+        </div>
+        <div class="header__stats--stat">
+          <div>
+            <h1>350+</h1>
+            <p>Cryptocurrencies listed</p>
+          </div>
+        </div>
+        <div class="header__stats--stat">
+          <div>
+            <h1>$19.52 billion</h1>
+            <p>Trade Volume</p>
+          </div>
+        </div>
+        <div class="header__stats--stat">
+          <div>
+            <h1>&gt;99.91</h1>
+            <p>Accuracy</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</header>
+
+<!-- Popular Cryptocurrencies -->
+
+<section
+  class="max-wrapper dark-mode-background std-top-space popular-cryptocurrencies"
+>
+  <div class="max-wrapper__content">
+    <div class="popular-cryptocurrencies__title">
+      <h1 class="std-title theme--text">Popular Cryptocurrencies</h1>
+      <div>
+        <span>View more markets</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="#929aa5"
+          height="24"
+          width="24"
+          class="css-1j6o9r1"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <div class="popular-cryptocurrencies__content">
+      <div class="popular-cryptocurrencies__content--item">
+        <div>Name</div>
+        <div><span class="b-ellipsis">Last Price</span></div>
+        <div><span class="b-ellipsis">Volume</span></div>
+        <div>Market Cap</div>
+      </div>
+      <div
+        class="popular-cryptocurrencies__content--item popular-cryptocurrencies__content--item__data"
+      >
+        <div>
+          <img src="../static/assets/images/bnb.png" alt="BNB" />
+          <h2 class="theme--text">BNB</h2>
+          <span>BNB</span>
+        </div>
+        <div>
+          <span class="b-ellipsis theme--text">
+            ${{ instruments.BNB[1] }}
+          </span>
+        </div>
+        <div>
+          <span class="b-ellipsis green--text-color">
+            {{ instruments.BNB[2] }}
+          </span>
+        </div>
+        <div class="theme--text">$44.861B</div>
+      </div>
+      <div
+        class="popular-cryptocurrencies__content--item popular-cryptocurrencies__content--item__data"
+      >
+        <div>
+          <img src="../static/assets/images/btc.png" alt="BTC" />
+          <h2 class="theme--text">Bitcoin</h2>
+          <span>BTC</span>
+        </div>
+        <div>
+          <span class="b-ellipsis theme--text">
+            ${{ instruments.BTC[1] }}
+          </span>
+        </div>
+        <div>
+          <span class="b-ellipsis green--text-color">
+            {{ instruments.BTC[2] }}
+          </span>
+        </div>
+        <div class="theme--text">$844.194B</div>
+      </div>
+      <div
+        class="popular-cryptocurrencies__content--item popular-cryptocurrencies__content--item__data"
+      >
+        <div>
+          <img src="../static/assets/images/eth.png" alt="ETH" />
+          <h2 class="theme--text">Ethereum</h2>
+          <span>ETH</span>
+        </div>
+        <div>
+          <span class="b-ellipsis theme--text">
+            ${{ instruments.ETH[1] }}
+          </span>
+        </div>
+        <div>
+          <span class="b-ellipsis green--text-color">
+            {{ instruments.ETH[2] }}
+          </span>
+        </div>
+        <div class="theme--text">$277.215B</div>
+      </div>
+      <div
+        class="popular-cryptocurrencies__content--item popular-cryptocurrencies__content--item__data"
+      >
+        <div>
+          <img src="../static/assets/images/gal.png" alt="GAL" />
+          <h2 class="theme--text">Galxe</h2>
+          <span>GAL</span>
+        </div>
+        <div>
+          <span class="b-ellipsis theme--text">
+            ${{ instruments.GAL[1] }}
+          </span>
+        </div>
+        <div>
+          <span class="b-ellipsis green--text-color">
+            {{ instruments.GAL[2] }}
+          </span>
+        </div>
+        <div class="theme--text">$178.834M</div>
+      </div>
+      <div
+        class="popular-cryptocurrencies__content--item popular-cryptocurrencies__content--item__data"
+      >
+        <div>
+          <img src="../static/assets/images/gmt.png" alt="GMT" />
+          <h2 class="theme--text">Green Metaverse Token</h2>
+          <span>GMT</span>
+        </div>
+        <div>
+          <span class="b-ellipsis theme--text">
+            ${{ instruments.GMT[1] }}
+          </span>
+        </div>
+        <div>
+          <span class="b-ellipsis green--text-color">
+            {{ instruments.GMT[2] }}
+          </span>
+        </div>
+        <div class="theme--text">$419.612M</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Crypto Portfolio
+
+    <div class="max-wrapper dark-mode-background crypto-portfolio std-top-space">
+      <div class="max-wrapper__content">
+        <div class="crypto-portfolio__mobile-title">
+          <h1 class="theme--text">Build you crypto portfolio</h1>
+          <p class="theme--text-light">Start your first trade with these easy steps</p>
+        </div>
+        <div class="crypto-portfolio__box">
+          <div class="crypto-portfolio__box--main">
+            <div class="crypto-portfolio__box--main__title">
+              <h1 class="std-title theme--text">Build you crypto portfolio</h1>
+              <p class="theme--text-light">Start your first trade with these easy steps</p>
+            </div>
+            <div class="crypto-portfolio__box--main__content">
+              <div class="crypto-portfolio__box--main__content--card">
+                <div class="crypto-portfolio__box--main__content--card__image">
+                  <img
+                    src="./assets/images/kyc.svg"
+                    alt="Verify your identity"
+                  />
+                </div>
+                <div
+                  class="crypto-portfolio__box--main__content--card__caption"
+                >
+                  <h2 class="theme--text">Verify your identity</h2>
+                  <p class="theme--text-light">
+                    Complete the identity verification process to secure your
+                    account and transactions.
+                  </p>
+                </div>
+              </div>
+              <div class="crypto-portfolio__box--main__content--card">
+                <div class="crypto-portfolio__box--main__content--card__image">
+                  <img
+                    src="./assets/images/user.svg"
+                    alt="Verify your identity"
+                  />
+                </div>
+                <div
+                  class="crypto-portfolio__box--main__content--card__caption"
+                >
+                  <h2 class="theme--text">Fund your account</h2>
+                  <p class="theme--text-light">
+                    Add funds to your crypto account to start trading crypto.
+                    You can add funds with a variety of payment methods.
+                  </p>
+                </div>
+              </div>
+              <div class="crypto-portfolio__box--main__content--card">
+                <div class="crypto-portfolio__box--main__content--card__image">
+                  <img
+                    src="./assets/images/spot.svg"
+                    alt="Verify your identity"
+                  />
+                </div>
+                <div
+                  class="crypto-portfolio__box--main__content--card__caption"
+                >
+                  <h2 class="theme--text">Start trading</h2>
+                  <p class="theme--text-light">
+                    You're good to go! Buy/sell crypto, set up recurring buys
+                    for your investments, and discover what Binance has to
+                    offer.
+                  </p>
+                </div>
+              </div>
+              <div class="btn">Get Started</div>
+            </div>
+          </div>
+          <div class="crypto-portfolio__box--image">
+            <img
+              src="./assets/images/portfolio-section.webp"
+              alt="Build you crypto portfolio"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+<!-- Daily Rewards -->
+
+<section class="daily-rewards dark-mode-background max-wrapper std-top-space">
+  <div class="max-wrapper__content">
+    <div class="daily-rewards__title">
+      <h1 class="std-title theme--text">PyPredict Predictions</h1>
+      <p class="std-subtitle theme--text-light">
+        Feed updated real-time with trained data.
+      </p>
+    </div>
+    <div class="daily-rewards__content">
+      <div class="daily-rewards__content--card">
+        <h1 class="daily-rewards__content--card__title theme--text"></h1>
+        <div class="daily-rewards__content--card__content">
+          {{ forecast[0] }}
+        </div>
+        <div class="daily-rewards__content--card__footer">
+          <div class="daily-rewards__content--card__footer--leading">
+            <img src="../static/assets/images/usdt.png" alt="USDT" />
+            <span class="theme--text">USDT</span>
+          </div>
+          <div class="daily-rewards__content--card__footer--trailing">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="css-1j6o9r1"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="daily-rewards__content--card">
+        <h1 class="daily-rewards__content--card__title theme--text"></h1>
+        <div class="daily-rewards__content--card__content">
+          {{ forecast[1] }}
+        </div>
+        <div class="daily-rewards__content--card__footer">
+          <div class="daily-rewards__content--card__footer--leading">
+            <img src="../static/assets/images/btc.png" alt="BTC" />
+            <span class="theme--text">BTC</span>
+          </div>
+          <div class="daily-rewards__content--card__footer--trailing">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="css-1j6o9r1"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="daily-rewards__content--card">
+        <h1 class="daily-rewards__content--card__title theme--text"></h1>
+        <div class="daily-rewards__content--card__content">
+          {{ forecast[2] }}
+        </div>
+        <div class="daily-rewards__content--card__footer">
+          <div class="daily-rewards__content--card__footer--leading">
+            <img src="../static/assets/images/bnb.png" alt="BNB" />
+            <span class="theme--text">BNB</span>
+          </div>
+          <div class="daily-rewards__content--card__footer--trailing">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="css-1j6o9r1"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="daily-rewards__content--card">
+        <h1 class="daily-rewards__content--card__title theme--text"></h1>
+        <div class="daily-rewards__content--card__content">
+          {{ forecast[3] }}
+        </div>
+        <div class="daily-rewards__content--card__footer">
+          <div class="daily-rewards__content--card__footer--leading">
+            <img src="../static/assets/images/busd.png" alt="BUSD" />
+            <span class="theme--text">BUSD</span>
+          </div>
+          <div class="daily-rewards__content--card__footer--trailing">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="css-1j6o9r1"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="daily-rewards__content--card">
+        <h1 class="daily-rewards__content--card__title theme--text"></h1>
+        <div class="daily-rewards__content--card__content">
+          {{ forecast[4] }}
+        </div>
+        <div class="daily-rewards__content--card__footer">
+          <div class="daily-rewards__content--card__footer--leading">
+            <img src="../static/assets/images/eth.png" alt="ETH" />
+            <span class="theme--text">ETH</span>
+          </div>
+          <div class="daily-rewards__content--card__footer--trailing">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="css-1j6o9r1"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="daily-rewards__content--card">
+        <h1 class="daily-rewards__content--card__title theme--text"></h1>
+        <div class="daily-rewards__content--card__content">
+          {{ forecast[5] }}
+        </div>
+        <div class="daily-rewards__content--card__footer">
+          <div class="daily-rewards__content--card__footer--leading">
+            <img src="../static/assets/images/dot.png" alt="DOT" />
+            <span class="theme--text">DOT</span>
+          </div>
+          <div class="daily-rewards__content--card__footer--trailing">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="css-1j6o9r1"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="daily-rewards__content--card">
+        <h1 class="daily-rewards__content--card__title theme--text"></h1>
+        <div class="daily-rewards__content--card__content">
+          {{ forecast[6] }}
+        </div>
+        <div class="daily-rewards__content--card__footer">
+          <div class="daily-rewards__content--card__footer--leading">
+            <img src="../static/assets/images/ada.png" alt="ADA" />
+            <span class="theme--text">ADA</span>
+          </div>
+          <div class="daily-rewards__content--card__footer--trailing">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="css-1j6o9r1"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="daily-rewards__content--card">
+        <h1 class="daily-rewards__content--card__title theme--text"></h1>
+        <div class="daily-rewards__content--card__content">
+          {{ forecast[7] }}
+        </div>
+        <div class="daily-rewards__content--card__footer">
+          <div class="daily-rewards__content--card__footer--leading">
+            <img src="../static/assets/images/shib.png" alt="SHIB" />
+            <span class="theme--text">DOGE</span>
+          </div>
+          <div class="daily-rewards__content--card__footer--trailing">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="css-1j6o9r1"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.288 12l-3.89 3.89 1.768 1.767L15.823 12l-1.768-1.768-3.889-3.889-1.768 1.768 3.89 3.89z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn" id="timerl">Start to Earn</div>
+    <script>
+      updatetime();
+      function updatetime() {
+        //Use search with ""
+        document.getElementById("timerl").innerText =
+          new Date().toLocaleTimeString().substring(0, 5) +
+          " " +
+          new Date().toLocaleTimeString().substring(8);
+        setTimeout(updatetime, 1000);
+      }
+    </script>
+  </div>
+</section>
+
+<!-- Need Help -->
+
+<section class="help max-wrapper dark-mode-background std-top-space">
+  <div class="max-wrapper__content">
+    <div class="help__title">
+      <h1 class="std-title theme--text">Python Components</h1>
+    </div>
+    <div class="help__content">
+      <div class="help__content--card">
+        <img src="../static/assets/images/cs.svg" alt="24/7 Chat Support" />
+        <div class="help__content--card__content">
+          <h1 class="theme--text">Scikit-Learn</h1>
+          <div class="theme--text-light">
+            Machine learning library for the Python programming language
+          </div>
+          <a href="https://scikit-learn.org/stable/"> <p>Learn more</p></a>
+        </div>
+      </div>
+      <div class="help__content--card">
+        <img
+          src="../static/assets/images/community.svg"
+          alt="24/7 Chat Support"
+        />
+        <div class="help__content--card__content">
+          <h1 class="theme--text">yfinance</h1>
+          <div class="theme--text-light">
+            Fetch Historical Prices using yfinance
+          </div>
+          <a href="https://pypi.org/project/yfinance/"> <p>Learn more</p></a>
+        </div>
+      </div>
+      <div class="help__content--card">
+        <img src="../static/assets/images/blog.svg" alt="24/7 Chat Support" />
+        <div class="help__content--card__content">
+          <h1 class="theme--text">Flask</h1>
+          <div class="theme--text-light">
+            Flask is a micro web framework written in Python.
+          </div>
+          <a href="https://flask.palletsprojects.com/en/3.0.x/">
+            <p>Learn more</p></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Start Earning Today -->
+
+<section class="earn max-wrapper">
+  <div class="max-wrapper__content">
+    <h1 class="std-title theme--text">Project Available on Github</h1>
+    <div class="btn">
+      <a href="https://github.com/Shreyas-Daptare/PyPredict">Github</a>
+    </div>
+  </div>
+</section>
+
+<div class="max-wrapper copyright dark-mode-background">
+  <div class="max-wrapper__content copyright__text">
+    PyPredict &copy; <span></span>
+  </div>
+</div>
+<script
+  src="https://kit.fontawesome.com/16ea0da941.js"
+  crossorigin="anonymous"
+></script>
+<script src="../static/scripts/main.js"></script>
+{% endblock %}
